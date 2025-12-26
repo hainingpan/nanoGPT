@@ -117,6 +117,6 @@ def process_mbox_filtered(mbox_file, output_file, min_length=50):
 if __name__ == "__main__":
     process_mbox_filtered(
         mbox_file="email.mbox",
-        output_file="input2.txt",
+        output_file="input.txt",
         min_length=50  # Adjust this as needed
     )
