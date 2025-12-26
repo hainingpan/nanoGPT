@@ -32,3 +32,4 @@ val_ids.tofile(os.path.join(os.path.dirname(__file__), 'val.bin'))
 
 # train has 1,098,093 tokens
 # val has 120,840 tokens
+# python train.py config/train_shakespeare_char.py --dataset=email --compile=False
