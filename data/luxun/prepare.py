@@ -31,6 +31,16 @@ val_ids = np.array(val_ids, dtype=np.uint32)
 train_ids.tofile(os.path.join(os.path.dirname(__file__), 'train.bin'))
 val_ids.tofile(os.path.join(os.path.dirname(__file__), 'val.bin'))
 
+# save meta info
+import pickle
+meta = {
+    'vocab_size': enc.n_vocab,
+    'dtype': 'uint32',
+}
+with open(os.path.join(os.path.dirname(__file__), 'meta.pkl'), 'wb') as f:
+    pickle.dump(meta, f)
+print(f"Saved meta.pkl with vocab_size={enc.n_vocab}, dtype=uint32")
+
 # train has 4,530,524 tokens
 # val has 498,993 tokens
-# python train.py config/train_shakespeare_char.py --dataset=email --compile=False
+# python train.py config/train_shakespeare_char.py --dataset=luxun --compile=False
