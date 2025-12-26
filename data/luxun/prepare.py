@@ -43,4 +43,4 @@ print(f"Saved meta.pkl with vocab_size={enc.n_vocab}, dtype=uint32")
 
 # train has 4,530,524 tokens
 # val has 498,993 tokens
-# python train.py config/train_shakespeare_char.py --dataset=luxun --compile=False
+# python train.py config/train_shakespeare_char.py --dataset=luxun --compile=False --batch_size=32
